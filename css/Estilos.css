@@ -1,0 +1,25 @@
+        h1{
+            color: blue;
+            background: rgb(208, 208, 243);
+            border: 1px solid black;
+            width: 800px;
+            height: 30px;
+        }
+        h2{
+            color: "#191a74";
+            background: rgb(114, 114, 194);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-bottom: 40px;
+             width: 800px;
+            height: 30px;
+        }
+        p{
+            background-color: rgb(173, 212, 238);
+            font-family: Arial, Helvetica, sans-serif;
+            width: 800px;
+            height: 20px;
+        }
+        
