@@ -12,10 +12,10 @@
     <section>
         <div id="id_div"></div>
 
-        <label id="id_label_1" for="">Numero 1:</label>
+        <label id="id_label_1" for="id_n1">Numero 1:</label>
         <input id="id_n1" type="number">
         <br>
-          <label id="id_label_2" for="">Numero 2:</label>
+          <label id="id_label_2" for="id_n2">Numero 2:</label>
         <input id="id_n2"type="number">
         <br>
         <button onclick="cambiarColor('id_label_1','blue')">Cambiar 1</button>
@@ -25,11 +25,12 @@
         <button onclick="ocultarElemento('id_label_1')">Ocultar </button>
         <button onclick="mostrarElemento('id_label_1')">Mostrar </button>
         <hr>
-        <button onclick="evaluarOperacion()">+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
-        <label id="id_resultado" for="">3</label>
+        <button onclick="evaluarOperacion('+')">+</button>
+        <button onclick="evaluarOperacion('-')">-</button>
+        <button onclick="evaluarOperacion('*')">*</button>
+        <button onclick="evaluarOperacion('/')">/</button>
+        <label for="">  =  </label>
+        <label id="id_resultado" for=""></label>
 
    </section>
     <footer></footer>

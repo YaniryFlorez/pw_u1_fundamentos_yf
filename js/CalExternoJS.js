@@ -7,8 +7,7 @@
 
         }
         function construirH1(){
-            return '<h1 id=¨id_calculadora">Calculadora</h1>';
-        }
+            return '<h1 id="id_calculadora">Calculadora</h1>';        }
         function eliminarElemento(idElemento){
             document.getElementById(idElemento).remove();
         }
@@ -18,24 +17,26 @@
         function mostrarElemento(idElemento){
             document.getElementById(idElemento).style.display='block';
         }
-        function evaluarOperacion(){
-            let num1 = parseFloat(document.getElementById('id_n1').value);
-            let num2 = parseFloat(document.getElementById('id_n2').value);
+    function evaluarOperacion(tipo){
+    let num1 = parseFloat(document.getElementById('id_n1').value);
+    let num2 = parseFloat(document.getElementById('id_n2').value);
+    let resultado = 0;
 
-            if ( tipo ==='+'){
-                resultado = sumar(num1+num2);
-            }
-            if ( tipo ==='-'){
-                
-            }
-            if ( tipo ==='*'){
-                
-            }
-            if ( tipo ==='/'){
-                
-            }
-            document.getElementById('id_resultado').innerText= suma();
-        }
+    if (tipo === '+') {
+        resultado = sumar(num1, num2);
+    }
+    if (tipo === '-') {
+        resultado = restar(num1, num2);
+    }
+    if (tipo === '*') {
+        resultado = multiplicar(num1, num2);
+    }
+    if (tipo === '/') {
+        resultado = dividir(num1, num2);
+    }
+
+    document.getElementById('id_resultado').innerText = resultado;
+}
 
         function sumar(num1, num2){
            return num1+num2;
