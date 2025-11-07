@@ -140,7 +140,121 @@
         for(let clave in profesor){
             console.log(clave);
             console.log(profesor[clave]);
+        }
+
+         const e1 = {
+            nombre :'Fidel',
+            apellido: 'Vargas' ,
+            Edad: '38',
+            ecuatoriano: true,
+            genero:'M',
+            ciudad :'Quito'
 
         }
+         const e2 = {
+            nombre :'Fidel',
+            apellido: 'Vargas' ,
+            Edad: '38',
+            ecuatoriano: true,
+            genero:'M',
+            ciudad :'Quito'
+
+        }
+        /*
+       const arregloEstudiantes = [e1,e2];
+       console.log(arregloEstudiantes);
+
+       const arregloEstu =[e1,e2,{
+         nombre :'Fidel',
+            apellido: 'Vargas' ,
+            Edad: '38',
+            ecuatoriano: true,
+            genero:'M',
+            ciudad :'Quito'
+
+       }];
+       console.log( arregloEstu[0]);
+       console.log( arregloEstu[0]);
+*/
+
+       // desestructuración
+        //arreglos 
+        const ar1 =[1,2,3,4,5,6,7];
+        const [a,b,c,d,e] = ar1;
+        console.log(a);
+        console.log(d);
+
+        const [primero, , , , ultimo] = ar1;
+        console.log(primero);
+        console.log(ultimo);
+
+        const [pos1,pos2] = [1,2,3,4,5,6,7];
+        imprime(ar1);
+
+        //objetos
+        const e3 = {
+            nombre1 :'Fidel',
+            apellido1: 'Vargas' ,
+            Edad1: '38',
+            ecuatoriano1: true,
+            genero1:'M',
+            ciudad1 :'Quito'
+
+        }
+
+      const {nombre1, ciudad1} = e3;
+      console.log('objeto');
+      console.log(nombre1);
+      console.log(ciudad1);
+
+       const {nombre1:nom, ciudad1:ciu} = {
+            nombre1 :'Mario',
+            apellido1: 'Florez' ,
+            Edad1: '38',
+            ecuatoriano1: true,
+            genero1:'M',
+            ciudad1 :'Loja'
+
+        }
+        console.log('redefinir nombre:')
+        console.log(nom);
+        console.log(ciu);
+
+         const estu4 = {
+            nombre :'Fidel',
+            apellido: 'Vargas' ,
+            Edad: '38',
+            ecuatoriano: true,
+            genero:'M',
+            ciudad :'Quito',
+            direccion :{
+                  calle: 'Av. America',
+                  barrio: 'la gasca',
+                  numeracion:'123'
+            }
+        }
+        console.log(estu4.direccion);
+        console.log(estu4.direccion.barrio);
+
+        const {edad:ed, direccion}= estu4;
+        console.log(ed);
+        console.log(direccion);
+        const {calle} = direccion;
+        console.log(calle);
+
+        //desestructuracion en un solo paso 
+        console.log('en un solo paso');
+        const {direccion:{barrio,calle:c1, numeracion}}=estu4;
+        console.log(barrio);
+        console.log(c1);
+        console.log(numeracion);
+
         
+    }
+
+    function imprime(a,b,c){
+        console.log('imprime arreglo 1:')
+        console.log(a);
+        console.log(b);
+        console.log(c);
     }
