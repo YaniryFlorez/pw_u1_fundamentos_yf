@@ -8,35 +8,39 @@
     <script src="../js/Calculadora.js"></script>
 </head>
 <body>
+    <div class="container">
     <header>
         <h4>Calculadora</h4>
     </header>
-    <nav></nav>
-    <section>
+    <nav>Barra de navegacion</nav>
+    <br>
+    <section class="datos">
         <div class="calculadora"> 
-        <label for="">0+1=1</label>
-        <button>C</button>
+        <div id="display" ></div>
+        <button onclick="borrar()">C</button>
         <button>&larr;</button>
-        <button>%</button>
-        <button>/</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
-        <button>0</button>
-        <button>.</button>
-        <button>=</button>
+        <button onclick="mostrarDisplay('%')">%</button>
+        <button onclick="mostrarDisplay('/')">/</button>
+        <button onclick="mostrarDisplay('7')">7</button>
+        <button onclick="mostrarDisplay('8')">8</button>
+        <button onclick="mostrarDisplay('9')">9</button>
+        <button onclick="mostrarDisplay('*')">*</button>
+        <button onclick="mostrarDisplay('4')">4</button>
+        <button onclick="mostrarDisplay('5')">5</button>
+        <button onclick="mostrarDisplay('6')">6</button>
+        <button onclick="mostrarDisplay('-')">-</button>
+        <button onclick="mostrarDisplay('1')">1</button>
+        <button onclick="mostrarDisplay('2')">2</button>
+        <button onclick="mostrarDisplay('3')">3</button>
+        <button onclick="mostrarDisplay('+')">+</button>
+        <button onclick="mostrarDisplay('0')">0</button>
+        <button onclick="mostrarDisplay('.')">.</button>
+        <button onclick="mostrarDisplay('0')" class="column-2">=</button>
      
         </div>
     </section>
-    <footer></footer>
+    <br>
+    <footer>Pie</footer>
+    </div>
 </body>
 </html>
