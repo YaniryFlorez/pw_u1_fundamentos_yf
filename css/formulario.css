@@ -1,66 +1,74 @@
-
-
 .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
- body {
-    background: #fcfeff;
- }
 
- p:before {
-    content: attr(type);
-    display: block;
-    font-size: 20px;
-    color: #0677ac;
-    margin-top: 30px;
- }
- input {
-    width: 250px;
-    border: none;
-    border-bottom: 2px solid #82d2fa; 
-    background: none;
-    color: #093d57;
-    outline: none;
-    border-bottom: 2px solid  #04618b;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+body {
+  background: #fcfeff;
+}
+
+p[type]:before {
+  content: attr(type);
+  display: block;
+  font-size: 20px;
+  color: #0677ac;
+  margin-top: 30px;
+}
+
+input {
+  width: 250px;
+  border: none;
+  border-bottom: 2px solid #04618b;
+  background: none;
+  color: #093d57;
+  outline: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
 }
 
 form {
-    border: 2px solid  #b2e1f7;
-    background:  #e5f2f8;
-    border-radius: 10px;
-    padding: 40px 30px;
-    box-shadow: 8px 8px slategray;
+  border: 2px solid #b2e1f7;
+  background: #e5f2f8;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 8px 8px slategray;
 }
+
 button {
-    background:  #57a5c9;
-    padding: 10px 30px;
-    border-radius: 10px;
-    color: white;
-    margin: 15pxpx;
-    font-size: 25;
-    font-family: Arial, Helvetica, sans-serif;
+  background: #57a5c9;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: white;
+  margin: 15px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .btn {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
 
+header, h2 {
+  color: #0b5475;
+  border-bottom: 2px solid slategrey;
+  font-size: 35px;
 }
-header,h2 {
-    color: #0b5475;
-    border-bottom: 2px slategrey;
-    font-size: 35px;
-}
+
 .msg_error {
-    background: #0b5475;
-    border-left: 10px solid red ;
-    padding: 10px;
-    color: #fcfeff;
-    display: none; 
-    font-weight: bold;
+  background: #0b5475;
+  border-left: 10px solid red;
+  padding: 10px;
+  color: #fcfeff;
+  display: none;
+  font-weight: bold;
+}
 
+.error_asterisco {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+  display: none;
 }

@@ -1,41 +1,82 @@
-function guardar(){
-validarCampos();
+function guardar() {
+  return validarCampos();
 }
 
-function validarCampos(){
- let nombre= document.getElementById('id_nombre').value;
+function validarCampos() {
+  limpiarMensajes();
 
- if(nombre === ''){
-    console.log('Campo de nombre vacio');
-    return;
- }
+  let nombre = document.getElementById('id_nombre').value.trim();
+  if (nombre === '') {
+    mostrarMensaje('Nombre necesario');
+    mostrarAsterisco('id_error_nombre');
+    return false;
+  }
 
- let apellido= document.getElementById('id_apellido').value;
+  let apellido = document.getElementById('id_apellido').value.trim();
+  if (apellido === '') {
+    mostrarMensaje('Apellido necesario');
+    mostrarAsterisco('id_error_apellido');
+    return false;
+  }
 
- if(apellido === ''){
-    console.log('Campo de apellido vacio');
-    return;
- }
+  let fecha = document.getElementById('id_fecha').value.trim();
+  if (fecha === '') {
+    mostrarMensaje('Fecha necesaria');
+    mostrarAsterisco('id_error_fecha');
+    return false;
+  }
 
- let fecha= document.getElementById('id_fecha').value;
+ let email = document.getElementById('id_email').value.trim();
 
- if(fecha === ''){
-    console.log('Campo de fecha vacio');
-    return;
- }
+if (email === '') {
+  console.log('Campo de email vacío');
+  mostrarMensaje('Email necesario');
+  mostrarAsterisco('id_error_email');
+  return;
+}
 
- let email= document.getElementById('id_email').value;
+if (!validarEmail(email)) {
+  console.log('Formato de email inválido');
+  mostrarMensaje('Formato de email inválido');
+  mostrarAsterisco('id_error_email');
+  return;
+}
+ 
+  let password = document.getElementById('id_password').value.trim();
+  if (password === '') {
+    mostrarMensaje('Contraseña necesaria');
+    mostrarAsterisco('id_error_password');
+    return false;
+  }
 
- if(email === ''){
-    console.log('Campo de email vacio');
-    return;
- }
+  return true;
+}
 
- let password= document.getElementById('id_password').value;
+function mostrarMensaje(msj) {
+  let mensaje = document.getElementById('id_msg_error');
+  mensaje.innerText = msj;
+  mensaje.style.display = "block";
+}
 
- if(password === ''){
-    console.log('Campo de password vacio');
-    return;
- }
+function mostrarAsterisco(idElemento) {
+  const elemento = document.getElementById(idElemento);
+  elemento.innerText = '*';
+  elemento.style.display = "inline";
+}
 
+function limpiarMensajes() {
+  let mensaje = document.getElementById('id_msg_error');
+  mensaje.innerText = "";
+  mensaje.style.display = "none";
+
+  const erroresAsteriscos = document.querySelectorAll('.error_asterisco');
+  erroresAsteriscos.forEach(e => {
+    e.innerText = '*';
+    e.style.display = "none";
+  });
+}
+
+function validarEmail(valor) {
+  const patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return patron.test(valor);
 }
