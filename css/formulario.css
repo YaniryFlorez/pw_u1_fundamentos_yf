@@ -55,3 +55,12 @@ header,h2 {
     border-bottom: 2px slategrey;
     font-size: 35px;
 }
+.msg_error {
+    background: #0b5475;
+    border-left: 10px solid red ;
+    padding: 10px;
+    color: #fcfeff;
+    display: none; 
+    font-weight: bold;
+
+}
