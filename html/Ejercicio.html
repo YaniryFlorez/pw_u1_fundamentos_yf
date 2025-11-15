@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="../css/ejercicio.css">
+    <script src="../js/Ejercicio.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <nav></nav>
+        <section class="division">
+            <div class="img">
+                <img src="..//img/targ.png" alt="no se cargo la imagen">
+            </div>
+            <div class="datos">
+              <form action="#">
+                 <h1>Payment details</h1>
+                <p type="Cardholder Name">
+                    <input type="text" id="id_name">
+                    <span id="id_error_name" class="error_asterisco"></span>
+                </p>
+                <p type="Card Number">
+                    <input type="number" id="id_number">
+                    <span id="id_error_number" class="error_asterisco"></span>
+                </p>
+                    <div class="colum">
+                       <p type="Exp Date">
+                       <input class="dos" type="date" id="id_date">
+                       <span id="id_error_date" class="error_asterisco"></span>
+                       </p> 
+                       <p type="CVV">
+                       <input class="dos"  type="number" id="id_cvv">
+                       <span id="id_error_cvv" class="error_asterisco"></span>
+                       </p> 
+                    </div>
+                <div class="btn"><button class="boton">Confirmar</button></div>
+              
+                </form>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+    
+</body>
+</html>
